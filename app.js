@@ -17,12 +17,14 @@ function addTodo(event) {
   //Create button
   const todoButton = document.createElement("button")
   todoButton.classList = "remove-button"
+  todoButton.type = "button"
   const todoButtonIcon = document.createElement("i")
   todoButtonIcon.classList = "fa fa-trash"
   todoButton.appendChild(todoButtonIcon)
 
   //Append to List
-  todoListElem.appendChild(todoLabel)
   todoList.appendChild(todoListElem)
-  todoList.appendChild(todoButton)
+
+  todoListElem.appendChild(todoLabel)
+  todoListElem.appendChild(todoButton)
 }
