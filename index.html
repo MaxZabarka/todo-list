@@ -11,7 +11,7 @@
   </head>
   <body>
       <h1 class="title">To-Do List</h1>
-      <form>
+      <form onSubmit="return false;">
         <input class="input-box" type="text">
         <button type="button" class="add-button">
           <i class="fa fa-plus"></i>
@@ -19,22 +19,7 @@
       </form>
       <div class="todo">
           <ul class="todo__items">
-            <li class="todo__item">
 
-              <p class="todo__label">
-                Item 1
-                </p>
-              <button type="button" class="remove-button">
-                  <i class="fa fa-trash"></i>
-              </button>
-
-            </li>
-            <li class="todo__item">
-              <p class="todo__label">Hello!</p>
-              <button type="button" class="remove-button">
-                  <i class="fa fa-trash"></i>
-              </button>
-            </li>
           </ul>
       </div>
       <script type="text/javascript" src="app.js"></script>

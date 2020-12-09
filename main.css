@@ -37,11 +37,15 @@ body {
   border: none;
   outline: none;
   margin: 10px;
+  transition: all ease 0.5s;
+
 }
 .add-button:hover {
   cursor: pointer;
   color: rgb(79, 161, 226);
   background-color: white;
+  transition: all ease 0.5s;
+
 }
 
 
@@ -55,17 +59,21 @@ body {
   margin-top: 10px
 }
 .todo__label {
-  margin: 0px 10px 0px 0px;
   font-size: .8em;
   display: inline-block;
   background-color: white;
   color:black;
   width: 300px;
+  margin-right:7px;
   text-align: left;
   height: 30px;
-  padding:5px;
-  vertical-align: middle;
+  padding: 7px;
   border-radius: 5px;
+  transition: all ease 0.5s;
+
+}
+i {
+  pointer-events: none;
 }
 .remove-button {
   color:white;
@@ -75,10 +83,23 @@ body {
   border-radius: 5px;
   border: none;
   outline: none;
+  transition: all ease 0.5s;
+
 }
 .remove-button:hover {
   cursor: pointer;
   background-color:white;
   color:rgb(79, 161, 226);
+  transition: all ease 0.5s;
 
+}
+.strikethrough {
+  transition: all ease 0.5s;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transition: all ease 0.5s;
+  transform: translateY(8rem) rotateZ(-20deg);
+  opacity: 0;
 }
