@@ -75,20 +75,20 @@ function deleteTodo(e) {
 }
 function saveLocalTodos(todo) {
   let todos;
-  if(sessionStorage.getItem('todos') === null) {
+  if(localStorage.getItem('todos') === null) {
     todos = []
   } else {
-    todos = JSON.parse(sessionStorage.getItem('todos'))
+    todos = JSON.parse(localStorage.getItem('todos'))
   }
   todos.push(todo)
-  sessionStorage.setItem('todos',JSON.stringify(todos))
+  localStorage.setItem('todos',JSON.stringify(todos))
 }
 function getTodos() {
   let todos;
-  if(sessionStorage.getItem('todos') === null) {
+  if(localStorage.getItem('todos') === null) {
     todos = []
   } else {
-    todos = JSON.parse(sessionStorage.getItem('todos'))
+    todos = JSON.parse(localStorage.getItem('todos'))
   }
   todos.forEach(function(todo) {
     createListElement(todo)
@@ -96,12 +96,12 @@ function getTodos() {
 }
 function removeTodo(todo) {
   let todos;
-  if(sessionStorage.getItem('todos') === null) {
+  if(localStorage.getItem('todos') === null) {
     todos = []
   } else {
-    todos = JSON.parse(sessionStorage.getItem('todos'))
+    todos = JSON.parse(localStorage.getItem('todos'))
   }
   todosIndex = todos.indexOf(todo.parentElement.children[0].innerText)
   todos.splice(todosIndex,1)
-  sessionStorage.setItem('todos',JSON.stringify(todos))
+  localStorage.setItem('todos',JSON.stringify(todos))
 }
